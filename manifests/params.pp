@@ -27,7 +27,15 @@ class qpid::params {
   $user = 'qpidd'
   $group = 'qpidd'
 
-  $server_packages = ['qpid-cpp-server', 'qpid-cpp-client', 'python-qpid-qmf', 'python-qpid', ]
+  case $::operatingsystemmajrelease {
+    '6': {
+      $server_packages = ['qpid-cpp-server', 'qpid-cpp-client', 'python-qpid-qmf', 'python-qpid', ]
+    }
+    '7': {
+      $server_packages = ['qpid-cpp-server', 'qpid-cpp-client', 'python-qpid-qmf', 'python2-qpid', 'python2-qpid-qmf', ]
+    }
+  }
+
 
   $server_store = true
   $server_store_package = 'qpid-cpp-server-linearstore'
