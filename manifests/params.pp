@@ -32,7 +32,7 @@ class qpid::params {
       $server_packages = ['qpid-cpp-server', 'qpid-cpp-client', 'python-qpid-qmf', 'python-qpid', ]
     }
     '7': {
-      $server_packages = ['qpid-cpp-server', 'qpid-cpp-client', 'python2-qpid', 'python2-qpid-qmf-1', ]
+      $server_packages = ['qpid-cpp-server', 'qpid-cpp-client', 'python2-qpid', 'python2-qpid-qmf', ]
     }
   }
 
